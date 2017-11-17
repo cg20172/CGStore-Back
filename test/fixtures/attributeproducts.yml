@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  range: MyText
+  product: one
+  attribute: one
+
+two:
+  range: MyText
+  product: two
+  attribute: two
