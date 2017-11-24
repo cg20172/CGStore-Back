@@ -1,7 +1,7 @@
 class NewQuoteController < ApplicationController
     def index
         @quotes = Quote.all
-    
+
         render json: @quotes
     end
 
@@ -10,8 +10,9 @@ class NewQuoteController < ApplicationController
         user_id = new_quote[:user_id]
         product_id = new_quote[:product_id]
         date = new_quote[:date]
+        quantity = new_quote[:quantity]
         params = new_quote[:params]
-        quote_to_send = {"date":date, "state":1,"quantity":1, "user_id": user_id, "product_id": product_id}
+        quote_to_send = {"date":date, "state":1,"quantity": quantity, "user_id": user_id, "product_id": product_id}
 
         @quote = Quote.new(quote_to_send);
         if @quote.save
